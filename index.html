@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For Siddu ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Always-on background -->
+  <div id="bg-hearts" aria-hidden="true"></div>
+
+  <!-- Section-only FX layers -->
+  <div id="fx-butterflies" class="fx" aria-hidden="true"></div>
+  <div id="fx-flowers" class="fx" aria-hidden="true"></div>
+  <div id="fx-future" class="fx fx-future" aria-hidden="true"></div>
+  <div id="fx-bundle" class="fx" aria-hidden="true"></div>
+
+  <!-- Music -->
+  <audio id="bgMusic" src="song.mp3" preload="auto" loop></audio>
+
+  <header class="topbar">
+    <button id="musicBtn" class="pill">▶ Play music</button>
+  </header>
+
+  <main>
+    <!-- S0: Landing (unlocked) -->
+    <section id="s0" class="section unlocked">
+      <div class="card hero">
+        <p class="kicker">FOR YOU, SIDDU</p>
+        <h1 class="title">Happy Valentine’s Day</h1>
+        <h1 class="title">Siddu ❤️</h1>
+        <p class="subtitle">
+          Every day with you already feels special…<br/>
+          but today I wanted to create something just for us.
+        </p>
+
+        <div class="actions">
+          <button class="btn primary nextBtn" data-next="s1">Start our story →</button>
+        </div>
+
+        <p class="tiny">You’ll unlock each part by clicking 💗</p>
+      </div>
+    </section>
+
+    <!-- S1: How it started -->
+    <section id="s1" class="section locked">
+      <div class="card">
+        <h2 class="h2">How it started…</h2>
+        <p class="text">
+          I still remember how everything began… so unexpected… so beautiful bike ride
+          but somehow it slowly became the most beautiful part of my life.
+          <br/><br/>
+          I didn’t realize then that you would become my comfort, my happiness… my person.
+        </p>
+
+        <img class="potrait" src="assets/photos/started.jpeg" alt="How it started" />
+        <p class="caption">Some beginnings quietly change everything.</p>
+
+        <p class="prompt">Do you remember this?</p>
+        <div class="choiceRow">
+          <button class="btn choiceBtn" data-next="s2">I remember ❤️</button>
+          <button class="btn choiceBtn" data-next="s2">Tell me more…</button>
+        </div>
+
+        <p class="reaction" id="r1"></p>
+      </div>
+    </section>
+
+    <!-- S2: Butterflies -->
+    <section id="s2" class="section locked">
+      <div class="card">
+        <h2 class="h2">The butterflies when we’re together…</h2>
+        <p class="text">
+          You know that feeling? The little butterflies… the calm happiness…
+          the way everything else just fades away.
+          <br/><br/>
+          That’s what you feel like to me.
+        </p>
+
+        
+        <p class="prompt">What are you feeling right now?</p>
+        <div class="choiceRow">
+          <button class="btn choiceBtn" data-next="s3" data-fx="butterflies">Butterflies 🦋</button>
+          <button class="btn choiceBtn" data-next="s3" data-fx="butterflies">Missing you ❤️</button>
+        </div>
+
+        <p class="reaction" id="r2"></p>
+      </div>
+    </section>
+
+    <!-- S3: Long distance (photo split) -->
+    <section id="s3" class="section locked">
+      <div class="card">
+        <h2 class="h2">How we’re making our best in long distance…</h2>
+        <p class="text">
+          Distance wasn’t part of the plan… but somehow we turned it into something strong.
+          Different places, different time zones… yet the same love, the same effort, the same “us.”
+        </p>
+
+        <div id="split" class="split">
+          <div class="half me">
+            <img src="assets/photos/me.jpeg" alt="Me" />
+            <span>Me</span>
+          </div>
+
+          <div class="connector">
+            <span class="line"></span>
+            <span class="heart">❤</span>
+          </div>
+
+          <div class="half him">
+            <img src="assets/photos/him.jpeg" alt="You" />
+            <span>You</span>
+          </div>
+        </div>
+
+        <p class="note">Thank you for never giving up on us.</p>
+
+        <p class="prompt">What makes us strong?</p>
+        <div class="choiceRow">
+          <button class="btn choiceBtn" data-next="s4" data-anim="split">Effort 🤍</button>
+          <button class="btn choiceBtn" data-next="s4" data-anim="split">Trust 🫶</button>
+        </div>
+
+        <p class="reaction" id="r3"></p>
+      </div>
+    </section>
+
+    <!-- S4: Fights -->
+    <section id="s4" class="section locked">
+      <div class="card">
+        <h2 class="h2">How fights never break us… they make us stronger</h2>
+        <p class="text">
+          We don’t always agree. We argue, we misunderstand sometimes…
+          but somehow we always find our way back.
+          <br/><br/>
+          Not because we have to… but because we want to.
+        </p>
+
+        <div id="bond" class="bond" aria-hidden="true">
+          <span class="bh left">❤</span>
+          <span class="bh right">❤</span>
+          <span class="glow"></span>
+        </div>
+        <img class="portrait" src="assets/photos/fights.jpeg" alt="Us" />
+        <p class="caption">Even our storms bring us closer.</p>
+
+        <p class="prompt">What do you believe about us?</p>
+        <div class="choiceRow">
+          <button class="btn choiceBtn" data-next="s5" data-anim="bond">We grow stronger</button>
+          <button class="btn choiceBtn" data-next="s5" data-anim="bond">We always come back</button>
+        </div>
+
+        <p class="reaction" id="r4"></p>
+      </div>
+    </section>
+
+    <!-- S5: Normal day -->
+    <section id="s5" class="section locked">
+      <div class="card">
+        <h2 class="h2">How a normal day becomes exciting… just by talking to you</h2>
+        <p class="text">
+          Sometimes it’s just a normal day… nothing big happening.
+          But one conversation with you, one laugh, one facetime
+          and suddenly everything feels lighter.
+        </p>
+
+        <img class="potrait" src="assets/photos/normal.jpeg" alt="Normal day" />
+        <p class="caption">You make simple moments feel magical.</p>
+
+        <p class="prompt">What’s my favorite part of the day?</p>
+        <div class="choiceRow">
+          <button class="btn choiceBtn" data-next="s6" data-fx="flowers">Talking to you 🌸</button>
+          <button class="btn choiceBtn" data-next="s6" data-fx="flowers">Hearing your voice ❤️</button>
+        </div>
+
+        <p class="reaction" id="r5"></p>
+      </div>
+    </section>
+
+    <!-- S6: Future -->
+    <section id="s6" class="section locked">
+      <div class="card">
+        <h2 class="h2">How we’re excited for the coming years…</h2>
+        <p class="text">
+          There’s so much we still haven’t done… places to go, memories to create,
+          moments to live together instead of through screens.
+          <br/><br/>
+          Thinking about that future with you makes me excited.
+        </p>
+
+        <img class="potrait" src="assets/photos/future.jpeg" alt="Future" />
+        <p class="caption">The best chapters are still coming.</p>
+
+        <p class="prompt">What are you most excited for?</p>
+        <div class="choiceRow">
+          <button class="btn choiceBtn" data-next="s7" data-fx="future">Our future ✨</button>
+          <button class="btn choiceBtn" data-next="s7" data-fx="future">Being together soon 🌅</button>
+        </div>
+
+        <p class="reaction" id="r6"></p>
+      </div>
+    </section>
+
+    <!-- S7: Mood + why settle -->
+    <section id="s7" class="section locked">
+      <div class="card">
+        <h2 class="h2">What mood do you want for this Valentine’s?</h2>
+        <p class="prompt">Choose one…</p>
+
+        <div class="grid4">
+          <button class="btn moodBtn" data-mood="Love letter 💌">Love letter 💌</button>
+          <button class="btn moodBtn" data-mood="Flowers 🌸">Flowers 🌸</button>
+          <button class="btn moodBtn" data-mood="Best memory 📸">Best memory 📸</button>
+          <button class="btn moodBtn" data-mood="Just us ❤️">Just us ❤️</button>
+        </div>
+
+        <div id="whyAll" class="why" hidden>
+          <p class="whyLine">But why settle for one…</p>
+          <p class="whyLine delay">when I’m ready to give you all… ❤️</p>
+        </div>
+
+        <div class="actions">
+          <button id="toPause" class="btn primary nextBtn" data-next="s8" hidden>Continue →</button>
+        </div>
+
+        <!-- <p class="reaction" id="r7"></p> -->
+      </div>
+    </section>
+
+    <!-- S8: Emotional pause -->
+    <section id="s8" class="section locked">
+      <div class="card">
+        <h2 class="h2">One more thing…</h2>
+        <p class="pause">
+          Somehow you became my favorite habit,<br/>
+          my safest place,<br/>
+          and the person I want beside me<br/>
+          in every version of my future.<br/><br/>
+          Distance doesn’t scare me anymore…<br/>
+          because loving you feels certain.
+        </p>
+
+        <!-- <img class="potrait" src="assets/photos/pause.jpeg" alt="Pause" /> -->
+        <p class="caption">No matter what… it’s always you.</p>
+
+        <div class="actions">
+          <button class="btn primary nextBtn" data-next="final">One last thing…</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL: Valentine ask -->
+    <section id="final" class="section locked">
+      <div class="card">
+        <h2 class="h2">We may not be in the same place today…</h2>
+        <p class="finalText">but you still have my whole heart.</p>
+
+        <h2 class="ask">Will you be my Valentine? ❤️</h2>
+
+        <div class="choiceRow">
+          <button class="btn yesBtn">Yes ❤️</button>
+          <button class="btn yesBtn">Always 😌</button>
+        </div>
+
+        <p id="yesMsg" class="yesMsg" hidden>
+          I didn’t just choose you for today.<br/>
+          I choose you in every little moment,<br/>
+          every future plan,<br/>
+          every quiet day ahead.<br/><br/>
+          And honestly… I always will.
+        </p>
+
+        <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+      </div>
+    </section>
+
+    <footer class="footer">Made with love by Sanjana 💗</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
